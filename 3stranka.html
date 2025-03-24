@@ -3,37 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kontakt - Cheeseburgery</title>
 </head>
-<body>
-    <header>
-        <h1>Kontaktujte nás</h1>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333;">
+    <header style="background-color: #d35400; color: white; padding: 1rem; text-align: center;">
+        <h1 style="margin: 0;">Kontaktujte nás</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Domů</a></li>
-                <li><a href="2stranka.html">Typy Cheeseburgerů</a></li>
-                <li><a href="3stranka.html">Kontakt</a></li>
+            <ul style="padding: 0; list-style: none; display: flex; justify-content: center;">
+                <li style="margin: 0 1rem;"><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Domů</a></li>
+                <li style="margin: 0 1rem;"><a href="2stranka.html" style="color: white; text-decoration: none; font-weight: bold;">Typy Cheeseburgerů</a></li>
+                <li style="margin: 0 1rem;"><a href="3stranka.html" style="color: white; text-decoration: none; font-weight: bold;">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Máte otázky? Napište nám!</h2>
-        <form action="#" method="post">
-            <label for="name">Jméno:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+    <main style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+        <section style="margin-bottom: 2rem;">
+            <h2 style="color: #d35400;">Máte otázky? Napište nám!</h2>
+            <form action="#" method="post" style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <div style="margin-bottom: 1rem;">
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Jméno:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">E-mail:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Předmět:</label>
+                    <select id="subject" name="subject" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="dotaz">Obecný dotaz</option>
+                        <option value="recept">Dotaz k receptům</option>
+                        <option value="spoluprace">Nabídka spolupráce</option>
+                        <option value="jine">Jiné</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Zpráva:</label>
+                    <textarea id="message" name="message" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; min-height: 150px;"></textarea>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Chci odebírat newsletter s novými recepty</label>
+                </div>
+                
+                <input type="submit" value="Odeslat" style="background-color: #d35400; color: white; border: none; padding: 0.7rem 1.5rem; font-size: 1rem; border-radius: 4px; cursor: pointer;">
+            </form>
+        </section>
+        
+        <section style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: #d35400;">Kde nás najdete</h3>
+                <p><strong>Adresa:</strong><br>
+                Cheeseburgery s.r.o.<br>
+                Burgerová 123<br>
+                110 00 Praha 1</p>
+                
+                <p><strong>Otevírací doba:</strong><br>
+                Po-Pá: 10:00 - 22:00<br>
+                So-Ne: 11:00 - 23:00</p>
+            </div>
             
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Zpráva:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            
-            <input type="submit" value="Odeslat">
-        </form>
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: #d35400;">Kontaktní údaje</h3>
+                <p><strong>Telefon:</strong> +420 123 456 789</p>
+                <p><strong>E-mail:</strong> info@cheeseburgery.cz</p>
+                
+                <h4 style="margin-top: 1.5rem;">Sociální sítě</h4>
+                <p>
+                    <a href="#" style="color: #d35400; text-decoration: none;">Facebook</a> |
+                    <a href="#" style="color: #d35400; text-decoration: none;">Instagram</a> |
+                    <a href="#" style="color: #d35400; text-decoration: none;">Twitter</a>
+                </p>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Cheeseburgery. Všechna práva vyhrazena.</p>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem;">
+        <p style="margin: 0;">&copy; 2025 Cheeseburgery. Všechna práva vyhrazena.</p>
     </footer>
 </body>
 </html>
