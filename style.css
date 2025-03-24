@@ -1,20 +1,31 @@
 /* Main Styles */
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #ff8c00;
+    --text-color: #333;
+    --bg-color: #f8f8f8;
+    --form-bg: #f9f9f9;
+    --form-border: #e0e0e0;
+    --footer-bg: #222;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #ff8c00, #ff6b00);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: white;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.5s ease-in-out;
 }
 
 header h1 {
@@ -25,16 +36,21 @@ header h1 {
 
 /* Navigation Styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    transition: transform 0.2s;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
 }
 
 nav ul li a {
@@ -44,7 +60,7 @@ nav ul li a {
     font-size: 1.1em;
     padding: 8px 15px;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -58,7 +74,7 @@ nav ul li a[href="3stranka.html"] {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
     padding: 30px;
     background-color: white;
@@ -66,42 +82,37 @@ main {
     max-width: 1000px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    min-height: calc(100vh - 300px); /* Adjust based on your footer height */
+    min-height: calc(100vh - 300px);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Form Styles */
 form {
-    background-color: #f9f9f9;
+    background-color: var(--form-bg);
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--form-border);
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #ff6b00;
+    color: var(--primary-color);
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-select {
+input, textarea, select {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border: 2px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    transition: border 0.3s;
+    transition: border 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus,
-select:focus {
-    border-color: #ff8c00;
+input:focus, textarea:focus, select:focus {
+    border-color: var(--secondary-color);
     outline: none;
 }
 
@@ -111,87 +122,20 @@ textarea {
 }
 
 input[type="submit"] {
-    background: linear-gradient(to right, #ff8c00, #ff6b00);
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     color: white;
     border: none;
     padding: 12px 25px;
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background: linear-gradient(to right, #ff6b00, #ff8c00);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 107, 0, 0.3);
 }
 
-/* Contact Info Styles */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.contact-info div {
-    flex: 1;
-    min-width: 250px;
-    background-color: #fff9f2;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #ff8c00;
-}
-
-.contact-info h3 {
-    color: #ff6b00;
-    margin-top: 0;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    background: linear-gradient(135deg, #333, #222);
-    color: white;
-    padding: 20px 0;
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #ff8c00;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin: 5px 0;
-    }
-    
-    main {
-        padding: 20px 15px;
-        margin: 10px;
-    }
-}
+/* Contact*
