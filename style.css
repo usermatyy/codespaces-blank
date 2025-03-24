@@ -3,10 +3,11 @@
     --primary-color: #ff6b00;
     --secondary-color: #ff8c00;
     --text-color: #333;
-    --bg-color: #f8f8f8;
-    --form-bg: #f9f9f9;
-    --form-border: #e0e0e0;
+    --bg-color: #f5f5f5;
+    --form-bg: #fff;
+    --form-border: #ddd;
     --footer-bg: #222;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -18,35 +19,39 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     animation: fadeInDown 0.5s ease-in-out;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Navigation Styles */
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 15px;
 }
 
 nav ul li {
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 nav ul li:hover {
@@ -58,62 +63,65 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+nav ul li a:hover,
+nav ul li a:focus {
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
-/* Current Page Indicator */
+/* Highlight Current Page */
 nav ul li a[href="3stranka.html"] {
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
 }
 
 /* Main Content */
 main {
-    padding: 30px;
-    background-color: white;
-    margin: 20px auto;
+    padding: 40px;
+    background: var(--form-bg);
+    margin: 30px auto;
     max-width: 1000px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     min-height: calc(100vh - 300px);
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Form Styles */
+/* Forms */
 form {
-    background-color: var(--form-bg);
-    padding: 25px;
-    border-radius: 8px;
+    background: var(--form-bg);
+    padding: 30px;
+    border-radius: 10px;
     border: 1px solid var(--form-border);
+    box-shadow: var(--shadow);
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: var(--primary-color);
 }
 
 input, textarea, select {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid var(--form-border);
+    border-radius: 6px;
     font-size: 16px;
-    transition: border 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus {
     border-color: var(--secondary-color);
     outline: none;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
 }
 
 textarea {
@@ -121,21 +129,42 @@ textarea {
     resize: vertical;
 }
 
+/* Submit Button */
 input[type="submit"] {
     background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 14px 28px;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 107, 0, 0.4);
 }
 
-/* Contact*
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
