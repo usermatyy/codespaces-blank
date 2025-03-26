@@ -168,3 +168,156 @@ footer {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+.page-header {
+    background-color: #d35400;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.page-title {
+    margin: 0;
+}
+
+/* Navigation Styles */
+.main-navigation {
+    margin-top: 1rem;
+}
+
+.nav-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: #d35400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Recipe Styles */
+.recipe {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-title {
+    color: #d35400;
+    margin-top: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.recipe-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.ingredients, .instructions {
+    flex: 1;
+    min-width: 300px;
+}
+
+.ingredients {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.ingredients-title, .instructions-title {
+    color: #333;
+    margin-top: 0;
+}
+
+.ingredients-list, .steps-list {
+    padding-left: 1.5rem;
+}
+
+/* Footer Styles */
+.page-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.copyright {
+    margin: 0;
+}
+/* Add these styles to your existing style.css */
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.recipe-image img:hover {
+    transform: scale(1.03);
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .recipe-header {
+        flex-direction: column;
+    }
+    
+    .recipe-image {
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+}
