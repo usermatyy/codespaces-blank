@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Vítejte na stránkách o Cheeseburgerech!</h1>
-        <nav>
-            <ul style="padding: 0; list-style: none; display: flex; justify-content: center;">
-                <li style="margin: 0 1rem;"><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Domů</a></li>
-                <li style="margin: 0 1rem;"><a href="2stranka.html" style="color: white; text-decoration: none; font-weight: bold;">Typy Cheeseburgerů</a></li>
-                <li style="margin: 0 1rem;"><a href="3stranka.html" style="color: white; text-decoration: none; font-weight: bold;">Kontakt</a></li>
+    <header class="main-header">
+        <h1 class="site-title">Vítejte na stránkách o Cheeseburgerech!</h1>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link current">Domů</a></li>
+                <li class="nav-item"><a href="2stranka.html" class="nav-link">Typy Cheeseburgerů</a></li>
+                <li class="nav-item"><a href="3stranka.html" class="nav-link">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="intro">
-            <h2>Co je to cheeseburger?</h2>
-            <p>Cheeseburger je hamburger, který obsahuje plátek sýra, nejčastěji roztaveného, spolu s masovým kotletem, zeleninou a pečivem. Tento ikonický pokrm vznikl ve Spojených státech a stal se celosvětovým fenoménem.</p>
-            <img src="burger eggerito.jpeg" alt="Klasický cheeseburger" class="food-image">
+    <main class="main-content">
+        <section class="intro-section">
+            <h2 class="section-title">Co je to cheeseburger?</h2>
+            <p class="intro-text">Cheeseburger je hamburger, který obsahuje plátek sýra, nejčastěji roztaveného, spolu s masovým kotletem, zeleninou a pečivem. Tento ikonický pokrm vznikl ve Spojených státech a stal se celosvětovým fenoménem.</p>
+            <img src="burger-eggerito.jpeg" alt="Klasický cheeseburger" class="food-image">
         </section>
 
-        <section class="recipe">
-            <h2>Recept na domácí cheeseburger</h2>
-            <div class="recipe-content">
-                <div class="ingredients">
-                    <h3>Ingredience (pro 4 porce):</h3>
-                    <ul>
+        <section class="recipe-section">
+            <h2 class="section-title">Recept na domácí cheeseburger</h2>
+            <div class="recipe-container">
+                <div class="ingredients-box">
+                    <h3 class="box-title">Ingredience (pro 4 porce):</h3>
+                    <ul class="ingredients-list">
                         <li>500 g mletého hovězího masa</li>
                         <li>4 plátky čedaru nebo eidamu</li>
                         <li>4 hamburgerové žemle</li>
@@ -42,9 +42,9 @@
                     </ul>
                 </div>
 
-                <div class="instructions">
-                    <h3>Postup přípravy:</h3>
-                    <ol>
+                <div class="instructions-box">
+                    <h3 class="box-title">Postup přípravy:</h3>
+                    <ol class="steps-list">
                         <li>Mleté maso rozdělte na 4 stejné části a vytvarujte placky o průměru asi 10 cm.</li>
                         <li>Osolte a opepřete obě strany.</li>
                         <li>Rozehřejte pánev s olejem a opékejte burgery po dobu 3-4 minut z každé strany.</li>
@@ -56,9 +56,9 @@
                 </div>
             </div>
 
-            <div class="tips">
-                <h3>Tipy pro dokonalý cheeseburger:</h3>
-                <ul>
+            <div class="tips-box">
+                <h3 class="box-title">Tipy pro dokonalý cheeseburger:</h3>
+                <ul class="tips-list">
                     <li>Maso nemačkejte při smažení, aby zůstalo šťavnaté</li>
                     <li>Pro lepší chuť použijte směs hovězího a vepřového masa</li>
                     <li>Žemle můžete lehce potřít máslem před opečením</li>
@@ -67,18 +67,19 @@
             </div>
         </section>
 
-        <section class="history">
-            <h2>Historie cheeseburgeru</h2>
-            <p>První zmínky o cheeseburgeru pocházejí z 20. let 20. století. Za vynálezce je považován kuchař Lionel Sternberger, který v roce 1926 přidal plátek sýra na hamburger ve svém rodinném restaurantu v Kalifornii. Od té doby se cheeseburger stal jedním z nejoblíbenějších rychlých jídel po celém světě.</p>
+        <section class="history-section">
+            <h2 class="section-title">Historie cheeseburgeru</h2>
+            <p class="history-text">První zmínky o cheeseburgeru pocházejí z 20. let 20. století. Za vynálezce je považován kuchař Lionel Sternberger, který v roce 1926 přidal plátek sýra na hamburger ve svém rodinném restaurantu v Kalifornii. Od té doby se cheeseburger stal jedním z nejoblíbenějších rychlých jídel po celém světě.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Cheeseburgery. Všechna práva vyhrazena.</p>
-        <p>Navštivte naše sociální sítě: 
-            <a href="#">Facebook</a> | 
-            <a href="#">Instagram</a> | 
-            <a href="#">Twitter</a>
-        </p>
+    <footer class="main-footer">
+        <p class="copyright">&copy; 2025 Cheeseburgery. Všechna práva vyhrazena.</p>
+        <div class="social-links">
+            <p>Navštivte naše sociální sítě:</p>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+        </div>
     </footer>
 </body>
 </html>
